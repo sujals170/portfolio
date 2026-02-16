@@ -1,0 +1,75 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Sora:wght@300;400;600;700&display=swap');
+
+:root {
+  color-scheme: light;
+  --bg: #0c1411;
+  --bg-alt: #111c17;
+  --panel: #1a2721;
+  --panel-2: #1e3229;
+  --text: #f4efe6;
+  --muted: #cbbfa9;
+  --accent: #f2b857;
+  --accent-2: #e17c58;
+  --accent-3: #7bc8a4;
+  --line: rgba(244, 239, 230, 0.12);
+  --shadow: 0 24px 60px rgba(4, 10, 8, 0.55);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+  background: radial-gradient(circle at top, rgba(36, 64, 54, 0.65), transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(225, 124, 88, 0.25), transparent 40%),
+    var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+      90deg,
+      rgba(244, 239, 230, 0.05),
+      rgba(244, 239, 230, 0.05) 1px,
+      transparent 1px,
+      transparent 8px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      rgba(244, 239, 230, 0.04),
+      rgba(244, 239, 230, 0.04) 1px,
+      transparent 1px,
+      transparent 7px
+    );
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: -1;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+#root {
+  position: relative;
+}
